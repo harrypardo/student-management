@@ -6,13 +6,23 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
+    id;
+    email;
+
     static associate(models) {
       // define association here
-      // this.belongsToMany(models.Student, { through: "Tutors_Students" });
+       this.belongsToMany(models.Student, { as: 'tutor', through: "Tutor_Student", foreignKey: 'tutorId' });
     }
   }
+
+
   Tutor.init(
     {
+      id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
+      },
       email: {
         type: DataTypes.STRING,
         validate: {
@@ -20,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
     },
+
     {
       sequelize,
       modelName: "Tutor",

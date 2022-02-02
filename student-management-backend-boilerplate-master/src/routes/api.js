@@ -10,4 +10,7 @@ const router = express.Router();
 // api/register
 router.post("/register", validate(apiValidator.register, { keyByField: true }), apiController.register);
 
+
+
+
 module.exports = router;
