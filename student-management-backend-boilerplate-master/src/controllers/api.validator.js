@@ -6,3 +6,9 @@ export const register = {
     students: Joi.array().items(Joi.string().email()).required().min(1),
   }),
 };
+
+export const getcommonstudents  = {
+  query: Joi.object({
+    tutor: Joi.array().items(Joi.string().email())
+  })
+}
