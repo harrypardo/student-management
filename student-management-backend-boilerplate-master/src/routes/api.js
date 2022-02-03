@@ -10,6 +10,7 @@ const router = express.Router();
 // api/register
 router.post("/register", validate(apiValidator.register, { keyByField: true }), apiController.register);
 router.get("/getcommonstudents", validate(apiValidator.getcommonstudents), apiController.getCommonStudents);
+router.post("/suspend", validate(apiValidator.suspendstudent), apiController.suspendStudent);
 
 
 

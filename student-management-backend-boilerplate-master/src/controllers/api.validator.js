@@ -12,3 +12,9 @@ export const getcommonstudents  = {
     tutor: Joi.array().items(Joi.string().email())
   })
 }
+
+export const suspendstudent  = {
+  body: Joi.object({
+    student: Joi.string().email().required(),
+  }),
+}
