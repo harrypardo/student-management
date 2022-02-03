@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    border: 2px solid grey;
+    background-color: honeydew;
+    flex-direction: column;
+  }
+
+  .labelStyle {
+      font-size: large;
+      display: flex;
+      gap: 10px;
+      line-height: 20px;
+  }
