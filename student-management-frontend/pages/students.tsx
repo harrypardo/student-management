@@ -49,6 +49,8 @@ const Students: NextPage<Props> = ({ tutor }) => {
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Students
           </h2>
+          <a href="/" className="text-blue-600 hover:text-blue-700 transition duration-300 ease-in-out mb-4 justify-center">Home</a>
+
         </div>
       </div>
       <ToastContainer />
