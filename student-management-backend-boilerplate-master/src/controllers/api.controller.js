@@ -19,6 +19,7 @@ export const register = async (req, res) => {
 
 export const getCommonStudents = async (req, res) => {
    try {
+     console.log(req);
     const service = new GetCommonStudents(req.query);
     const students = await service.call();
     return successResponse(req, res, students, 200);
